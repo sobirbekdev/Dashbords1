@@ -1,4 +1,10 @@
 
+
+
+
+
+
+
 let arrow = document.querySelectorAll(".arrow");
 for (var i = 0; i < arrow.length; i++) {
     arrow[i].addEventListener("click", (e) => {
@@ -8,7 +14,6 @@ for (var i = 0; i < arrow.length; i++) {
 }
 let sidebar = document.querySelector(".sidebar");
 let sidebarBtn = document.querySelector(".bx-menu");
-console.log(sidebarBtn);
 sidebarBtn.addEventListener("click", () => {
     sidebar.classList.toggle("close");
 });
@@ -20,10 +25,10 @@ let diagramma = document.getElementById('myChart').getContext('2d');
 let myChart = new Chart(diagramma, {
     type: 'line',
     data: {
-        labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14',
-            '15', '16', '17', '18', '19', '20','21','22','23','24','25','26','27','28','29','30'],
+        labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10',
+            ],
         datasets: [{
-            data: [5, 6, 7, 8, 9, 10, 11, 11, 10, 10, 9, 8, 7, 8, 10, 11, 12, 13, 14, 15, 15, 14, 13, 12, 11, 10, 9,8,10,11,12,13,15 ],
+            data: [3200, 7000, 4000, 8000, 5000, 7000, 5000, 9000, 4500, 10000, 4440, 8000, 3100, ],
             backgroundColor: "#E0E4FF",
             borderColor: "#6576FF",
             borderWidth: 4,
@@ -38,16 +43,8 @@ let myChart = new Chart(diagramma, {
         scales: {
             x: {
                 grid: {
-                    display: false
+                    display: true
                 }
-            },
-            y: {
-                min: 3,
-                max: 20,
-                ticks: {
-                    stepSize: 3,
-                    callback: (value) => '$' + value
-                },
             },
         }
     }
@@ -161,3 +158,26 @@ let ChartBar3 = new Chart(diagrammaUstun3, {
         }
     }
 });
+
+
+// Selection lang 
+
+
+
+let elDropdown = document.querySelector(".drop__down");
+let langList = document.querySelector(".list-lang");
+let elSelectImg = document.querySelector(".selectedImg");
+let elSelected = document.querySelector(".selected");
+
+elDropdown.addEventListener('click' , ()=>{
+    langList.classList.toggle('show');
+})
+
+langList.addEventListener('click', (e) =>{
+    const elImg =e.target.querySelector('.item__lang-img');
+    const elText =e.target.querySelector('.text__lang');
+
+    elSelectImg.src = elImg.src;
+    elSelected.innerHTML = elText.innerHTML;
+
+})

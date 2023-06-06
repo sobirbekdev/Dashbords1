@@ -15,10 +15,11 @@
     left: 0;
     height: 100%;
     width: 260px;
-    background: #11101d;
+    background: #101924;
     z-index: 100;
     transition: all 0.5s ease;
 }
+
 
 h1,
 h2 {
@@ -47,7 +48,7 @@ h3 {
 
 .sidebar .logo-details i {
     font-size: 30px;
-    color: #fff;
+    color: #B6C6E3;
     height: 50px;
     min-width: 78px;
     text-align: center;
@@ -55,8 +56,13 @@ h3 {
 }
 
 .sidebar .logo-details .logo_name {
-    font-size: 22px;
-    color: #fff;
+    /* font-size: 22px; */
+    color: #B6C6E3;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
     font-weight: 600;
     transition: 0.3s ease;
     transition-delay: 0.1s;
@@ -107,14 +113,14 @@ h3 {
     min-width: 78px;
     text-align: center;
     line-height: 50px;
-    color: #fff;
+    color: #8091A7;
     font-size: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .sidebar .nav-links li.showMenu i.arrow {
-    transform: rotate(-180deg);
+    transform: rotate(90deg);
 }
 
 .sidebar.close .nav-links i.arrow {
@@ -128,9 +134,13 @@ h3 {
 }
 
 .sidebar .nav-links li a .link_name {
-    font-size: 18px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
     font-weight: 400;
-    color: #fff;
+    color: #8091A7;
     transition: all 0.4s ease;
 }
 
@@ -144,6 +154,13 @@ h3 {
     margin-top: -10px;
     background: #1d1b31;
     display: none;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #8091A7;
 }
 
 .sidebar .nav-links li.showMenu .sub-menu {
@@ -151,11 +168,14 @@ h3 {
 }
 
 .sidebar .nav-links li .sub-menu a {
-    color: #fff;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
     font-size: 15px;
+    line-height: 20px;
+    color: #8091A7;
     padding: 5px 0;
     white-space: nowrap;
-    opacity: 0.6;
     transition: all 0.3s ease;
 }
 
@@ -245,23 +265,9 @@ h3 {
     padding: 10px;
 }
 
-.sidebar .profile-details .profile_name,
-.sidebar .profile-details .job {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    white-space: nowrap;
-}
 
-.sidebar.close .profile-details i,
-.sidebar.close .profile-details .profile_name,
-.sidebar.close .profile-details .job {
-    display: none;
-}
 
-.sidebar .profile-details .job {
-    font-size: 12px;
-}
+
 
 .home-section {
     position: relative;
@@ -322,4 +328,59 @@ h3 {
         width: 100%;
         left: 0;
     }
+}
+
+
+/* menu lang  */
+
+.drop__down {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #ffffff;
+}
+
+.arrow__lang {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.wraper__lang {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+
+
+.list-lang {
+    background-color: #fff;
+    position: absolute;
+    top: 45px;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.322);
+    cursor: pointer;
+    max-height: 200px;
+    width: 100%;
+    display: none;
+}
+
+.show {
+    display: block;
+    cursor: pointer;
+}
+.item__lang {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+
+}
+.item__lang:hover{
+    background-color: rgb(211, 211, 211);
 }
